@@ -1,0 +1,45 @@
+1. Install VitualBox
+
+2. Install Ubuntu 20.04 ISO image
+
+3. Update Ubuntu as needed
+   $ sudo su    ---> login as root
+   # apt-get update
+   # apt-get upgrade
+
+3. Switch  Ubuntu from Wayland to Xorg
+   # gedit /vi /etc/gdm3/custom.conf  -->  uncomment  #WaylandEnable=false
+
+4. Switch Ubuntu from gdm3 to sddm
+   # apt-get install sddm
+   # dpkg-reconfigure sddm
+
+5. C++ installation
+   # apt-get install build-essential gdb g++
+
+6. Qt installation (for both Ubuntu VirtulBox and BBB)
+------------------------------------------------------
+-- BBB Qt (Qt version 5.12.8 LTS)
+-- install lxqt build tools
+# apt-get install lxqt-build-tools
+
+-- install lxqt development library
+# apt-get install libfm-qt-dev
+
+-- install Qt 5.12.8 qtcreator qtdesigner
+# apt-get install qtcreator
+# apt-get install pyqt5-dev-tools
+
+-- install Qt examples and documentation
+# apt-get install qtbase5-examples qtbase5-doc-html
+# apt-get install qtquickcontrols5-examples qtquickcontrols5-doc-html
+# apt-get install qt5-doc qt5-doc-html
+
+-- project requirements
+# sudo apt install libqt5charts5-dev
+# sudo apt-get install nlohmann-json3-dev
+
+
+-- test Qt on VirtualBox and BBB
+$ qtcreator
+$ designer
